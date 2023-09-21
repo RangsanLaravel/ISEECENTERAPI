@@ -1,0 +1,12 @@
+D:\DevHome\Phase2\ISEECENTERAPI\ISEECENTERAPI.DataContract\bin\Release\net7.0\ISEECENTERAPI.DataContract.deps.json
+D:\DevHome\Phase2\ISEECENTERAPI\ISEECENTERAPI.DataContract\bin\Release\net7.0\ISEECENTERAPI.DataContract.dll
+D:\DevHome\Phase2\ISEECENTERAPI\ISEECENTERAPI.DataContract\bin\Release\net7.0\ISEECENTERAPI.DataContract.pdb
+D:\DevHome\Phase2\ISEECENTERAPI\ISEECENTERAPI.DataContract\obj\Release\net7.0\ISEECENTERAPI.DataContract.csproj.AssemblyReference.cache
+D:\DevHome\Phase2\ISEECENTERAPI\ISEECENTERAPI.DataContract\obj\Release\net7.0\ISEECENTERAPI.DataContract.GeneratedMSBuildEditorConfig.editorconfig
+D:\DevHome\Phase2\ISEECENTERAPI\ISEECENTERAPI.DataContract\obj\Release\net7.0\ISEECENTERAPI.DataContract.AssemblyInfoInputs.cache
+D:\DevHome\Phase2\ISEECENTERAPI\ISEECENTERAPI.DataContract\obj\Release\net7.0\ISEECENTERAPI.DataContract.AssemblyInfo.cs
+D:\DevHome\Phase2\ISEECENTERAPI\ISEECENTERAPI.DataContract\obj\Release\net7.0\ISEECENTERAPI.DataContract.csproj.CoreCompileInputs.cache
+D:\DevHome\Phase2\ISEECENTERAPI\ISEECENTERAPI.DataContract\obj\Release\net7.0\ISEECENTERAPI.DataContract.dll
+D:\DevHome\Phase2\ISEECENTERAPI\ISEECENTERAPI.DataContract\obj\Release\net7.0\refint\ISEECENTERAPI.DataContract.dll
+D:\DevHome\Phase2\ISEECENTERAPI\ISEECENTERAPI.DataContract\obj\Release\net7.0\ISEECENTERAPI.DataContract.pdb
+D:\DevHome\Phase2\ISEECENTERAPI\ISEECENTERAPI.DataContract\obj\Release\net7.0\ref\ISEECENTERAPI.DataContract.dll

@@ -1,0 +1,7 @@
+D:\DevHome\Phase2\ISEECENTERAPI\ISEECENTERAPI\obj\Debug\net7.0\ISEECENTERAPI.csproj.AssemblyReference.cache
+D:\DevHome\Phase2\ISEECENTERAPI\ISEECENTERAPI\obj\Debug\net7.0\ISEECENTERAPI.GeneratedMSBuildEditorConfig.editorconfig
+D:\DevHome\Phase2\ISEECENTERAPI\ISEECENTERAPI\obj\Debug\net7.0\ISEECENTERAPI.AssemblyInfoInputs.cache
+D:\DevHome\Phase2\ISEECENTERAPI\ISEECENTERAPI\obj\Debug\net7.0\ISEECENTERAPI.AssemblyInfo.cs
+D:\DevHome\Phase2\ISEECENTERAPI\ISEECENTERAPI\obj\Debug\net7.0\ISEECENTERAPI.csproj.CoreCompileInputs.cache
+D:\DevHome\Phase2\ISEECENTERAPI\ISEECENTERAPI\obj\Debug\net7.0\ISEECENTERAPI.MvcApplicationPartsAssemblyInfo.cs
+D:\DevHome\Phase2\ISEECENTERAPI\ISEECENTERAPI\obj\Debug\net7.0\ISEECENTERAPI.MvcApplicationPartsAssemblyInfo.cache

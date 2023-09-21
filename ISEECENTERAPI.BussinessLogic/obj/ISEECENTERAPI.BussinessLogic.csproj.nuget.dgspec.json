@@ -1,0 +1,380 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\DevHome\\Phase2\\ISEECENTERAPI\\ISEECENTERAPI.BussinessLogic\\ISEECENTERAPI.BussinessLogic.csproj": {}
+  },
+  "projects": {
+    "D:\\DevHome\\Phase2\\ISEECENTERAPI\\DataAccessUtility\\DataAccessUtility.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\DevHome\\Phase2\\ISEECENTERAPI\\DataAccessUtility\\DataAccessUtility.csproj",
+        "projectName": "DataAccessUtility",
+        "projectPath": "D:\\DevHome\\Phase2\\ISEECENTERAPI\\DataAccessUtility\\DataAccessUtility.csproj",
+        "packagesPath": "C:\\Users\\rangsan.chi\\.nuget\\packages\\",
+        "outputPath": "D:\\DevHome\\Phase2\\ISEECENTERAPI\\DataAccessUtility\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",
+          "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\rangsan.chi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files\\DevExpress 23.1\\Components\\System\\Components\\Packages": {},
+          "D:\\Program Files\\DevExpress 22.2\\Components\\System\\Components\\Packages": {},
+          "http://gitlabsource.bla.co.th/api/v4/projects/78/packages/nuget/index.json": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/nsFAupbiHLcGmSajDgPQfwATYSVTcrxI5GeY2vcxGFgshzHSOx/api": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\DevHome\\Phase2\\ISEECENTERAPI\\ISEECENTERAPI.BussinessLogic\\ISEECENTERAPI.BussinessLogic.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\DevHome\\Phase2\\ISEECENTERAPI\\ISEECENTERAPI.BussinessLogic\\ISEECENTERAPI.BussinessLogic.csproj",
+        "projectName": "ISEECENTERAPI.BussinessLogic",
+        "projectPath": "D:\\DevHome\\Phase2\\ISEECENTERAPI\\ISEECENTERAPI.BussinessLogic\\ISEECENTERAPI.BussinessLogic.csproj",
+        "packagesPath": "C:\\Users\\rangsan.chi\\.nuget\\packages\\",
+        "outputPath": "D:\\DevHome\\Phase2\\ISEECENTERAPI\\ISEECENTERAPI.BussinessLogic\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",
+          "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\rangsan.chi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files\\DevExpress 23.1\\Components\\System\\Components\\Packages": {},
+          "D:\\Program Files\\DevExpress 22.2\\Components\\System\\Components\\Packages": {},
+          "http://gitlabsource.bla.co.th/api/v4/projects/78/packages/nuget/index.json": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/nsFAupbiHLcGmSajDgPQfwATYSVTcrxI5GeY2vcxGFgshzHSOx/api": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\DevHome\\Phase2\\ISEECENTERAPI\\ISEECENTERAPI.DataAccess\\ISEECENTERAPI.DataAccess.csproj": {
+                "projectPath": "D:\\DevHome\\Phase2\\ISEECENTERAPI\\ISEECENTERAPI.DataAccess\\ISEECENTERAPI.DataAccess.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "CryptoHelper": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\DevHome\\Phase2\\ISEECENTERAPI\\ISEECENTERAPI.DataAccess\\ISEECENTERAPI.DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\DevHome\\Phase2\\ISEECENTERAPI\\ISEECENTERAPI.DataAccess\\ISEECENTERAPI.DataAccess.csproj",
+        "projectName": "ISEECENTERAPI.DataAccess",
+        "projectPath": "D:\\DevHome\\Phase2\\ISEECENTERAPI\\ISEECENTERAPI.DataAccess\\ISEECENTERAPI.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\rangsan.chi\\.nuget\\packages\\",
+        "outputPath": "D:\\DevHome\\Phase2\\ISEECENTERAPI\\ISEECENTERAPI.DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",
+          "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\rangsan.chi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files\\DevExpress 23.1\\Components\\System\\Components\\Packages": {},
+          "D:\\Program Files\\DevExpress 22.2\\Components\\System\\Components\\Packages": {},
+          "http://gitlabsource.bla.co.th/api/v4/projects/78/packages/nuget/index.json": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/nsFAupbiHLcGmSajDgPQfwATYSVTcrxI5GeY2vcxGFgshzHSOx/api": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\DevHome\\Phase2\\ISEECENTERAPI\\DataAccessUtility\\DataAccessUtility.csproj": {
+                "projectPath": "D:\\DevHome\\Phase2\\ISEECENTERAPI\\DataAccessUtility\\DataAccessUtility.csproj"
+              },
+              "D:\\DevHome\\Phase2\\ISEECENTERAPI\\ISEECENTERAPI.DataContract\\ISEECENTERAPI.DataContract.csproj": {
+                "projectPath": "D:\\DevHome\\Phase2\\ISEECENTERAPI\\ISEECENTERAPI.DataContract\\ISEECENTERAPI.DataContract.csproj"
+              },
+              "D:\\DevHome\\Phase2\\ISEECENTERAPI\\ITUtility\\ITUtility.csproj": {
+                "projectPath": "D:\\DevHome\\Phase2\\ISEECENTERAPI\\ITUtility\\ITUtility.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\DevHome\\Phase2\\ISEECENTERAPI\\ISEECENTERAPI.DataContract\\ISEECENTERAPI.DataContract.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\DevHome\\Phase2\\ISEECENTERAPI\\ISEECENTERAPI.DataContract\\ISEECENTERAPI.DataContract.csproj",
+        "projectName": "ISEECENTERAPI.DataContract",
+        "projectPath": "D:\\DevHome\\Phase2\\ISEECENTERAPI\\ISEECENTERAPI.DataContract\\ISEECENTERAPI.DataContract.csproj",
+        "packagesPath": "C:\\Users\\rangsan.chi\\.nuget\\packages\\",
+        "outputPath": "D:\\DevHome\\Phase2\\ISEECENTERAPI\\ISEECENTERAPI.DataContract\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",
+          "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\rangsan.chi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files\\DevExpress 23.1\\Components\\System\\Components\\Packages": {},
+          "D:\\Program Files\\DevExpress 22.2\\Components\\System\\Components\\Packages": {},
+          "http://gitlabsource.bla.co.th/api/v4/projects/78/packages/nuget/index.json": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/nsFAupbiHLcGmSajDgPQfwATYSVTcrxI5GeY2vcxGFgshzHSOx/api": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\DevHome\\Phase2\\ISEECENTERAPI\\ITUtility\\ITUtility.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\DevHome\\Phase2\\ISEECENTERAPI\\ITUtility\\ITUtility.csproj",
+        "projectName": "ITUtility",
+        "projectPath": "D:\\DevHome\\Phase2\\ISEECENTERAPI\\ITUtility\\ITUtility.csproj",
+        "packagesPath": "C:\\Users\\rangsan.chi\\.nuget\\packages\\",
+        "outputPath": "D:\\DevHome\\Phase2\\ISEECENTERAPI\\ITUtility\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",
+          "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\rangsan.chi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files\\DevExpress 23.1\\Components\\System\\Components\\Packages": {},
+          "D:\\Program Files\\DevExpress 22.2\\Components\\System\\Components\\Packages": {},
+          "http://gitlabsource.bla.co.th/api/v4/projects/78/packages/nuget/index.json": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/nsFAupbiHLcGmSajDgPQfwATYSVTcrxI5GeY2vcxGFgshzHSOx/api": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
