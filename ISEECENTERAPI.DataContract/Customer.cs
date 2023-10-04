@@ -8,7 +8,8 @@ namespace ISEECENTERAPI.DataContract
 {
     public class Customer
     {
-        public int customer_id { get; set; }
+        public string customer_id { get; set; }
+        public string fname { get; set; }
         public string cust_type { get; set; }
         public string Address { get; set; }
         public string district_name_tha { get; set; }
@@ -17,5 +18,6 @@ namespace ISEECENTERAPI.DataContract
         public string Zip_Code { get; set; }
         public string Phone_No { get; set; }
         public string Email { get; set; }
+        public List<VehicleCus> VehicleCus { get; set; }
     }
 }

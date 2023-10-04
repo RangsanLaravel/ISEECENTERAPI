@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HFOAtQmA4onod1iHie32WTTXZm3QM+vB6Q3gKg0qfSUOGckcH6PANF0zChGnO7EFAtwSv6oaZqjthkl8j3537Q==",
+  "dgSpecHash": "2v5H37z9W8Mg06PvB+i5ZUjAgqt05XvrsiR7SOtY/ie3I7MnIXFnedv6XvKmRXpYmtXdb69uxLbeXWOPymmONg==",
   "success": true,
-  "projectFilePath": "D:\\DevHome\\Phase2\\ISEECENTERAPI\\ISEECENTERAPI.DataContract\\ISEECENTERAPI.DataContract.csproj",
+  "projectFilePath": "\\\\Mac\\Home\\Documents\\Projects\\ISEECENTERAPI\\ISEECENTERAPI.DataContract\\ISEECENTERAPI.DataContract.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "NU1803",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://gitlabsource.bla.co.th/api/v4/projects/78/packages/nuget/index.json'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
-    }
-  ]
+  "logs": []
 }

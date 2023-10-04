@@ -75,8 +75,6 @@ namespace ISEECENTERAPI.Controllers
             }
         }
 
-
-
         [HttpGet("GetCounterDetail/{customerID}/{licenseNo}")]
         public async ValueTask<IActionResult> GetCounterDetail(string customerID, string licenseNo)
         {
@@ -85,6 +83,20 @@ namespace ISEECENTERAPI.Controllers
             try
             {
                 var application = await this.service.GetCounterDetail(customerID,licenseNo);
+                return Ok(application);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet("ReportList")]
+        public async ValueTask<IActionResult> ReportList()
+        {          
+            try
+            {
+                var application = await this.service.GET_REPORTCENTER();
                 return Ok(application);
             }
             catch (Exception ex)

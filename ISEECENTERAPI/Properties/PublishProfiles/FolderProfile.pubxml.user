@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>D:\Publish\ISEECENTERAPI</_PublishTargetUrl>
-    <History>True|2023-09-20T18:30:05.8368276Z;</History>
+    <History>False|2023-09-23T13:13:27.9638787Z;True|2023-09-21T01:30:05.8368276+07:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>

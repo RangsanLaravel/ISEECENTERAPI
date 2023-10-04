@@ -8,10 +8,10 @@ namespace ISEECENTERAPI.DataContract
 {
     public class EmailHistory
     {
-        public int Email_Id { get; set; }
+        public string Email_Id { get; set; }
         public string Email_Code { get; set; }
-        public int Job_Id { get; set; }
-        public int Customer_Id { get; set; }
+        public string Job_Id { get; set; }
+        public string Customer_Id { get; set; }
         public string Email_Address { get; set; }
         public DateTime SendDateTime { get; set; }
         public string Send_By { get; set; }

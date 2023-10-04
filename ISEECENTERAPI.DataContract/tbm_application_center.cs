@@ -14,9 +14,11 @@ namespace ISEECENTERAPI.DataContract
       public string application_link{get;set;}
       public string application_method{get;set;}
       public string application_status{get;set;}
+      public string application_image { get; set; }
       public string create_id{get;set;}
       public string create_dt{get;set;}
-      public string update_dt{get;set;}
-      public string application_image{get;set;}
+      public string upd_dt{get;set;}
+      public string upd_id{get;set; }
+
     }
 }

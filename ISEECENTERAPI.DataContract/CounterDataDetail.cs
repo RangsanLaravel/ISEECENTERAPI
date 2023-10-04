@@ -13,7 +13,6 @@ namespace ISEECENTERAPI.DataContract
         public List<Vehicle> Vehicles { get; set; }
         public List<JobHeader> JobHeaders { get; set; }
         public List<EmailHistory> EmailHistory { get; set; }
-        public List<VehicleCus> VehicleCus { get; set; }
         public List<NotificationEmail> notiemail { get; set; }
     }
 }

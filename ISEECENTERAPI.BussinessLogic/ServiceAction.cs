@@ -1,8 +1,11 @@
 ﻿using CryptoHelper;
 using ISEECENTERAPI.DataAccess;
 using ISEECENTERAPI.DataContract;
+using ITUtility;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -17,7 +20,7 @@ namespace ISEECENTERAPI.BussinessLogic
         private readonly string DBENV = string.Empty;
         public ServiceAction(string connectionstring, string DBENV)
         {
-            this._connectionstring = connectionstring;            
+            this._connectionstring = connectionstring;
             this.DBENV = DBENV;
         }
 
@@ -29,6 +32,12 @@ namespace ISEECENTERAPI.BussinessLogic
             try
             {
                 dataObjects = await repository.CounterCall(fname);
+                if (dataObjects is not null)
+                    foreach (Customer customer in dataObjects)
+                    {
+                        customer.VehicleCus = new List<VehicleCus>();
+                        customer.VehicleCus =await repository.GET_LICENSE(customer.customer_id.ToString());
+                    }
             }
             catch (Exception ex)
             {
@@ -102,7 +111,7 @@ namespace ISEECENTERAPI.BussinessLogic
             {
 
                 app = await repository.GETAPPLICATION(USERID);
-              
+
             }
             catch (Exception ex)
             {
@@ -114,6 +123,34 @@ namespace ISEECENTERAPI.BussinessLogic
             }
             return app;
 
+        }
+
+        public async ValueTask<List<tbm_report_center>> GET_REPORTCENTER()
+        {
+            List<tbm_report_center> rpt = new List<tbm_report_center>();
+            Repository repository = new Repository(_connectionstring, DBENV);
+            await repository.OpenConnectionAsync();
+            try
+            {
+
+                rpt = await repository.GET_REPORTCENTER();
+                if (rpt is not null)
+                    foreach (var item in rpt)
+                    {
+                        item.Params = new List<tbm_report_center_param>();
+                        item.Params = await repository.GET_REPORT_PARAM(item.rpt_id);
+                    }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                await repository.CloseConnectionAsync();
+            }
+            return rpt;
         }
     }
 }

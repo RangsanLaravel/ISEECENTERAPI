@@ -727,43 +727,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rangsan.chi\\.nuget\\packages\\": {},
-    "D:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages": {},
-    "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\rangsanchipphang\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DevHome\\Phase2\\ISEECENTERAPI\\ITUtility\\ITUtility.csproj",
+      "projectUniqueName": "\\\\Mac\\Home\\Documents\\Projects\\ISEECENTERAPI\\ITUtility\\ITUtility.csproj",
       "projectName": "ITUtility",
-      "projectPath": "D:\\DevHome\\Phase2\\ISEECENTERAPI\\ITUtility\\ITUtility.csproj",
-      "packagesPath": "C:\\Users\\rangsan.chi\\.nuget\\packages\\",
-      "outputPath": "D:\\DevHome\\Phase2\\ISEECENTERAPI\\ITUtility\\obj\\",
+      "projectPath": "\\\\Mac\\Home\\Documents\\Projects\\ISEECENTERAPI\\ITUtility\\ITUtility.csproj",
+      "packagesPath": "C:\\Users\\rangsanchipphang\\.nuget\\packages\\",
+      "outputPath": "\\\\Mac\\Home\\Documents\\Projects\\ISEECENTERAPI\\ITUtility\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",
-        "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\rangsan.chi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.2.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.1.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.2.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.1.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\rangsanchipphang\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
       ],
       "sources": {
-        "C:\\Program Files\\DevExpress 23.1\\Components\\System\\Components\\Packages": {},
-        "D:\\Program Files\\DevExpress 22.2\\Components\\System\\Components\\Packages": {},
-        "http://gitlabsource.bla.co.th/api/v4/projects/78/packages/nuget/index.json": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.devexpress.com/nsFAupbiHLcGmSajDgPQfwATYSVTcrxI5GeY2vcxGFgshzHSOx/api": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netstandard2.1": {
@@ -802,16 +786,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1803",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://gitlabsource.bla.co.th/api/v4/projects/78/packages/nuget/index.json'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
-    }
-  ]
+  }
 }

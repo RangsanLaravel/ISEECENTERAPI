@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ISEECENTERAPI.DataContract
-build_property.ProjectDir = D:\DevHome\Phase2\ISEECENTERAPI\ISEECENTERAPI.DataContract\
+build_property.ProjectDir = \\Mac\Home\Documents\Projects\ISEECENTERAPI\ISEECENTERAPI.DataContract\
