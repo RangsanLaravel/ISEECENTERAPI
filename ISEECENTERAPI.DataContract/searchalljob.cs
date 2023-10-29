@@ -12,5 +12,6 @@ namespace ISEECENTERAPI.DataContract
         public string fname { get; set; }
         public string job_id { get; set; }
         public string job_status_code { get; set; }
+        public string limit { get; set; }
     }
 }

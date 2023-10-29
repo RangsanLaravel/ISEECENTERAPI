@@ -17,7 +17,7 @@ namespace ISEECENTERAPI.Controllers
             this.service = new ServiceAction(this.Configuration.GetConnectionString("ConnectionSQLServer"), Configuration["ConfigSetting:DBENV"]);
             //this.mailService = mailService;
         }
-        [HttpGet("GET_DETAIL_ALLJOB")]
+        [HttpPost("GET_DETAIL_ALLJOB")]
         public async ValueTask<IActionResult> GET_DETAIL_ALLJOB(searchalljob data)
         {
             try

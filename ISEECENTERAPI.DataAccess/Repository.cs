@@ -161,7 +161,7 @@ namespace ISEECENTERAPI.DataAccess
             {
                 CommandType = System.Data.CommandType.Text,
                 Connection = this.sqlConnection,
-                CommandText = $@"select 
+                CommandText = $@"select {(string.IsNullOrEmpty(data.limit)?"":$"TOP {data.limit}")}
 	cus.customer_id,
 	fname,
 	Email,
@@ -187,10 +187,10 @@ AND  (@job_id IS NULL OR UPPER(hj.job_id) =UPPER(@job_id))
 AND (@job_status_code IS NULL OR UPPER(hj.job_status) =UPPER(@job_status_code)) "
             };
 
-            sql.Parameters.AddWithValue("@owner_id", data?.owner_id ?? (object)DBNull.Value);
-            sql.Parameters.AddWithValue("@fname", data?.fname==null? (object)DBNull.Value: $"%{data.fname}%");
-            sql.Parameters.AddWithValue("@job_id", data?.job_id ?? (object)DBNull.Value);
-            sql.Parameters.AddWithValue("@job_status_code", data?.job_status_code ?? (object)DBNull.Value);
+            sql.Parameters.AddWithValue("@owner_id", string.IsNullOrWhiteSpace(data.owner_id)? (object)DBNull.Value: data.owner_id);
+            sql.Parameters.AddWithValue("@fname", string.IsNullOrWhiteSpace(data.fname)? (object)DBNull.Value: $"%{data.fname}%");
+            sql.Parameters.AddWithValue("@job_id", string.IsNullOrWhiteSpace(data.job_id) ? (object)DBNull.Value:data.job_id);
+            sql.Parameters.AddWithValue("@job_status_code", string.IsNullOrWhiteSpace(data.job_status_code) ? (object)DBNull.Value:data.job_status_code);
             using (DataTable dt = await Utility.FillDataTableAsync(sql))
             {
                 if (dt.Rows.Count > 0)
