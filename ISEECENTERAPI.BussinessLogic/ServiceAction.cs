@@ -36,7 +36,7 @@ namespace ISEECENTERAPI.BussinessLogic
                     foreach (Customer customer in dataObjects)
                     {
                         customer.VehicleCus = new List<VehicleCus>();
-                        customer.VehicleCus =await repository.GET_LICENSE(customer.customer_id.ToString());
+                        customer.VehicleCus = await repository.GET_LICENSE(customer.customer_id.ToString());
                     }
             }
             catch (Exception ex)
@@ -151,6 +151,34 @@ namespace ISEECENTERAPI.BussinessLogic
                 await repository.CloseConnectionAsync();
             }
             return rpt;
+        }
+
+        public async ValueTask<List<crmmonitor>> GET_DETAIL_ALLJOB(searchalljob data)
+        {
+            List<crmmonitor> app = new List<crmmonitor>();
+            Repository repository = new Repository(_connectionstring, DBENV);
+            await repository.OpenConnectionAsync();
+            try
+            {
+
+                app = await repository.GET_DETAIL_ALLJOB(data);
+                app.TrimExcess();
+                if (app is not null)
+                    foreach (var item in app)
+                    {
+                        item.job_substatus = new List<substatus>();
+                        item.job_substatus = await repository.GET_SUBSTATUSAsync(item.job_id);
+                    }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                await repository.CloseConnectionAsync();
+            }
+            return app;
         }
     }
 }

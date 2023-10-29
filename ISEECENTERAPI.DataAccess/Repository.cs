@@ -8,6 +8,8 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ISEECENTERAPI.DataAccess
 {
@@ -151,6 +153,94 @@ namespace ISEECENTERAPI.DataAccess
          
         }
         #endregion " Counter "
+
+        #region " LIST DETAIL "
+        public async ValueTask<List<crmmonitor>> GET_DETAIL_ALLJOB(searchalljob data)
+        {
+            SqlCommand sql = new SqlCommand
+            {
+                CommandType = System.Data.CommandType.Text,
+                Connection = this.sqlConnection,
+                CommandText = $@"select 
+	cus.customer_id,
+	fname,
+	Email,
+	phone_no,
+	(select CONCAT(fullname,' ',lastname)  FROM [{DBENV}].[dbo].[tbm_employee] where user_id = hj.owner_id AND status =1) AS OWNER,
+	(select CONCAT(fullname,' ',lastname)  FROM [{DBENV}].[dbo].[tbm_employee] where user_id = hj.transfer_to AND status =1) AS transfer_to,
+	(select location_name FROM [{DBENV}].[dbo].[tbm_location_store] where owner_id = hj.owner_id AND status =1) AS location_name,
+	hj.job_id,
+    hj.license_no,
+	jt.jobdescription,
+	js.job_status_code,
+	js.job_status_desc
+from [{DBENV}].[dbo].[tbm_customer] cus
+INNER JOIN [{DBENV}].[dbo].[tbt_job_header] hj on cus.customer_id =hj.customer_id
+INNER JOIN [{DBENV}].[dbo].[tbm_jobtype] jt ON jt.jobcode =hj.type_job 
+INNER JOIN [{DBENV}].[dbo].[tbm_job_status] js ON js.job_status_code =hj.job_status
+WHERE cus.status =1
+AND hj.status =1 
+AND jt.status =1
+AND (@owner_id IS NULL OR COALESCE(transfer_to,owner_id)= @owner_id)
+AND (@fname IS NULL OR UPPER(fname) like UPPER(@fname))
+AND  (@job_id IS NULL OR UPPER(hj.job_id) =UPPER(@job_id))
+AND (@job_status_code IS NULL OR UPPER(hj.job_status) =UPPER(@job_status_code)) "
+            };
+
+            sql.Parameters.AddWithValue("@owner_id", data?.owner_id ?? (object)DBNull.Value);
+            sql.Parameters.AddWithValue("@fname", data?.fname==null? (object)DBNull.Value: $"%{data.fname}%");
+            sql.Parameters.AddWithValue("@job_id", data?.job_id ?? (object)DBNull.Value);
+            sql.Parameters.AddWithValue("@job_status_code", data?.job_status_code ?? (object)DBNull.Value);
+            using (DataTable dt = await Utility.FillDataTableAsync(sql))
+            {
+                if (dt.Rows.Count > 0)
+                {
+                    return dt.AsEnumerable<crmmonitor>().ToList();
+                }
+                else
+                {
+                    return null;
+                }
+            }
+
+        }
+
+        public async ValueTask<List<substatus>> GET_SUBSTATUSAsync(string jobid)
+        {
+            List<substatus> dataObjects = new List<substatus>() ;
+            SqlCommand sql = new SqlCommand
+            {
+                CommandType = System.Data.CommandType.Text,
+                Connection = this.sqlConnection,
+                CommandText = $@"SELECT ms.STATUS_CODE,
+       ms.STATUS_DESCRIPTION,
+	   st.status_remark,
+	   st.status_dt,
+	   (select CONCAT(fullname,' ',lastname)  FROM [{DBENV}].[dbo].[tbm_employee] where user_id = st.create_id AND status =1) AS CREATE_BY   
+  FROM [{DBENV}].[dbo].[tbt_job_substatus] st
+  INNER JOIN [{DBENV}].[dbo].[tbm_substatus] ms ON ms.STATUS_CODE =st.substatus
+  where st.active_flg =1
+  AND ms.ACTIVE_FLG =1
+  AND ms.STATUS_TYPE ='JOB'
+  AND st.job_id =@Job_ID
+ORDER BY st.STATUS_DT DESC "
+            };
+            sql.Parameters.AddWithValue("@Job_ID", jobid );
+
+            using (DataTable dt = await Utility.FillDataTableAsync(sql))
+            {
+                if (dt.Rows.Count > 0)
+                {
+                    dataObjects = dt.AsEnumerable<substatus>().ToList();
+                }
+                else
+                {
+                    dataObjects = null;
+                }
+            }
+            return dataObjects;
+        }
+        #endregion " LIST DETAIL " 
 
         #region " USER AND APPLICATION "
         public async ValueTask<employee_info> UserLogin(UserLogin user)
