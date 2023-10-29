@@ -1,5 +1,6 @@
 ﻿using ISEECENTERAPI.BussinessLogic;
 using ISEECENTERAPI.DataContract;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -24,6 +25,21 @@ namespace ISEECENTERAPI.Controllers
             {
                 var application = await this.service.GET_DETAIL_ALLJOB(data);
                 return Ok(application);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [Authorize]
+        [HttpGet("GET_ALL_OWNER")]
+        public async ValueTask<IActionResult> GET_ALL_OWNER()
+        {
+            try
+            {
+                var result = await this.service.GET_ALL_OWNER();
+                return Ok(result);
             }
             catch (Exception ex)
             {

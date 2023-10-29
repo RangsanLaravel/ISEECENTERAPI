@@ -10,6 +10,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ISEECENTERAPI.BussinessLogic
 {
@@ -169,6 +170,26 @@ namespace ISEECENTERAPI.BussinessLogic
                         item.job_substatus = new List<substatus>();
                         item.job_substatus = await repository.GET_SUBSTATUSAsync(item.job_id);
                     }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                await repository.CloseConnectionAsync();
+            }
+            return app;
+        }
+
+        public async ValueTask<List<tbm_employee>> GET_ALL_OWNER()
+        {
+            List<tbm_employee> app = new List<tbm_employee>();
+            Repository repository = new Repository(_connectionstring, DBENV);
+            await repository.OpenConnectionAsync();
+            try
+            {
+                app = await repository.GET_ALL_OWNER();         
             }
             catch (Exception ex)
             {

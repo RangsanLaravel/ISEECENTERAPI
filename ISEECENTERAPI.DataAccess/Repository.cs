@@ -189,7 +189,7 @@ AND (@job_status_code IS NULL OR UPPER(hj.job_status) =UPPER(@job_status_code)) 
 
             sql.Parameters.AddWithValue("@owner_id", string.IsNullOrWhiteSpace(data.owner_id)? (object)DBNull.Value: data.owner_id);
             sql.Parameters.AddWithValue("@fname", string.IsNullOrWhiteSpace(data.fname)? (object)DBNull.Value: $"%{data.fname}%");
-            sql.Parameters.AddWithValue("@job_id", string.IsNullOrWhiteSpace(data.job_id) ? (object)DBNull.Value:data.job_id);
+            sql.Parameters.AddWithValue("@job_id", string.IsNullOrWhiteSpace(data.job_id) ? (object)DBNull.Value:data.job_id.ToUpper());
             sql.Parameters.AddWithValue("@job_status_code", string.IsNullOrWhiteSpace(data.job_status_code) ? (object)DBNull.Value:data.job_status_code);
             using (DataTable dt = await Utility.FillDataTableAsync(sql))
             {
@@ -341,6 +341,50 @@ ORDER BY st.STATUS_DT DESC "
             }
         }
         #endregion " REPORT "
+
+        #region " DROP DOWN "
+        public async ValueTask<List<tbm_employee>> GET_ALL_OWNER()
+        {
+            SqlCommand sql = new SqlCommand
+            {
+                CommandType = System.Data.CommandType.Text,
+                Connection = this.sqlConnection,
+                CommandText = $@" SELECT user_id
+      ,user_name
+      ,password
+      ,fullname
+      ,lastname
+      ,idcard
+      ,position
+      ,status
+      ,create_date
+      ,create_by
+      ,update_date
+      ,update_by
+      ,showstock
+      ,img_path
+      ,technician_code
+      ,sign_img
+  FROM [{DBENV}].[dbo].[tbm_employee]
+WHERE STATUS =1"
+            };
+          
+
+            using (DataTable dt = await Utility.FillDataTableAsync(sql))
+            {
+                if (dt.Rows.Count > 0)
+                {
+                    return dt.AsEnumerable<tbm_employee>().ToList();
+                }
+                else
+                {
+                    return null;
+                }
+            }
+
+        }
+       
+        #endregion " DROP DOWN "
 
     }
 }
