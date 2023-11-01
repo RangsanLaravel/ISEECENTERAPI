@@ -163,7 +163,6 @@ namespace ISEECENTERAPI.BussinessLogic
             {
 
                 app = await repository.GET_DETAIL_ALLJOB(data);
-                app.TrimExcess();
                 if (app is not null)
                     foreach (var item in app)
                     {

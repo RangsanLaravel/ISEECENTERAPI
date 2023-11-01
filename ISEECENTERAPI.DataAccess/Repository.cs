@@ -164,6 +164,7 @@ namespace ISEECENTERAPI.DataAccess
                 CommandText = $@"select {(string.IsNullOrEmpty(data.limit)?"":$"TOP {data.limit}")}
 	cus.customer_id,
 	fname,
+    cus.address As contract,
 	Email,
 	phone_no,
 	(select CONCAT(fullname,' ',lastname)  FROM [{DBENV}].[dbo].[tbm_employee] where user_id = hj.owner_id AND status =1) AS OWNER,
@@ -173,7 +174,8 @@ namespace ISEECENTERAPI.DataAccess
     hj.license_no,
 	jt.jobdescription,
 	js.job_status_code,
-	js.job_status_desc
+	js.job_status_desc,
+    hj.create_date AS Deal_creation_date
 from [{DBENV}].[dbo].[tbm_customer] cus
 INNER JOIN [{DBENV}].[dbo].[tbt_job_header] hj on cus.customer_id =hj.customer_id
 INNER JOIN [{DBENV}].[dbo].[tbm_jobtype] jt ON jt.jobcode =hj.type_job 
